@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o main  -Wl,-rpath,/home/robot/Documents/WorkSpace/lio/lio_ws/devel/lib /home/robot/Documents/WorkSpace/lio/lio_ws/devel/lib/libserial.so /usr/lib/x86_64-linux-gnu/librt.so /usr/lib/x86_64-linux-gnu/libpthread.so 

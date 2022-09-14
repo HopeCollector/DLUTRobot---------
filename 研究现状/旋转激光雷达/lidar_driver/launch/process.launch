@@ -1,0 +1,27 @@
+<launch>
+    <!-- <node pkg="urg_node" type="urg_node" name="hokuyo_driver" args="_ip_address:=192.168.1.10">
+    </node> -->
+
+    <group ns="lidar_driver">
+        <node pkg="lidar_driver" type="driver" name="driver" output="screen">
+            <param name="buffer_size" type="int" value="3"/>
+            <param name="laser_rate" type="double" value="40"/>
+            <param name="laser_motor_bias" type="double" value="225"/>
+            <param name="laser_motor_speed" type="double" value="180"/>
+            <param name="line_num" type="int" value="40"/>
+            <param name="motor_id" type="str" value="/dev/ttyUSB0"/>
+        </node>
+
+        <!-- "使用不固定坐标系的欧拉角旋转，顺序为 z y x" -->
+        <!-- <node pkg="lidar_driver" type="processor" name="processor" output="screen">
+            <param name="time_one_frame" type="double" value="0.025"/>
+            <param name="transform_camera_to_body_x" type="double" value="0"/>
+            <param name="transform_camera_to_body_y" type="double" value="0"/>
+            <param name="transform_camera_to_body_z" type="double" value="0"/>
+            <param name="transform_laser_to_body_x" type="double" value="-90"/>
+            <param name="transform_laser_to_body_y" type="double" value="-90"/>
+            <param name="transform_laser_to_body_z" type="double" value="-90"/>
+            <remap from="/odom" to="/camera/odom/sample"/>
+        </node> -->
+    </group>
+</launch>

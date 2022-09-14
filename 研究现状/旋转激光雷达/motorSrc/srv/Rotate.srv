@@ -1,0 +1,8 @@
+uint8 id
+float64 speed
+float64 more
+float64 to
+int32 acc
+---
+bool success
+float64 currentDegree
